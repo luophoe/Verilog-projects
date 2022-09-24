@@ -1,0 +1,8 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(04May2022:08:39:02):( /pkg/cadence-incisiv-/15.10.027/i686-linux/tools/bin/irun alu.v alu_test.v )
+s2::(04May2022:08:42:49):( /pkg/cadence-incisiv-/15.10.027/i686-linux/tools/bin/irun alu.v alu_test.v )
+s3::(04May2022:08:43:25):( /pkg/cadence-incisiv-/15.10.027/i686-linux/tools/bin/irun alu.v alu_test.v )
+s4::(04May2022:08:49:54):( /pkg/cadence-incisiv-/15.10.027/i686-linux/tools/bin/irun alu.v alu_test.v )

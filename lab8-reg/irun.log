@@ -1,0 +1,47 @@
+irun: 15.10-s027: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun	15.10-s027: Started on May 04, 2022 at 13:46:07 MST
+/pkg/cadence-incisiv-/15.10.027/i686-linux/tools/bin/irun
+	register.v
+	register_test.v
+	-licqueue
+	-noievlic
+file: register.v
+	module worklib.register:v
+		errors: 0, warnings: 0
+file: register_test.v
+	module worklib.register_test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		register_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.register:v <0x5e8fa5b8>
+			streams:   2, words:   456
+		worklib.register_test:v <0x06c34fac>
+			streams:   7, words:  8734
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           6       6
+		Scalar wires:        3       -
+		Vectored wires:      2       -
+		Always blocks:       1       1
+		Initial blocks:      2       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.register_test:v
+Loading snapshot worklib.register_test:v .................... Done
+ncsim> source /pkg/cadence-incisiv-/15.10.027/i686-linux/tools/inca/files/ncsimrc
+ncsim> run
+At time 20 rst=0 load=1 data_in=01010101 data_out=01010101
+At time 30 rst=0 load=1 data_in=10101010 data_out=10101010
+At time 40 rst=0 load=1 data_in=11111111 data_out=11111111
+At time 50 rst=1 load=1 data_in=11111111 data_out=00000000
+TEST PASSED
+Simulation complete via $finish(1) at time 50 NS + 0
+./register_test.v:47     $finish;
+ncsim> exit
+TOOL:	irun	15.10-s027: Exiting on May 04, 2022 at 13:46:39 MST  (total: 00:00:32)

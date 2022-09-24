@@ -1,0 +1,49 @@
+irun: 15.10-s027: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun	15.10-s027: Started on May 04, 2022 at 13:33:42 MST
+/pkg/cadence-incisiv-/15.10.027/i686-linux/tools/bin/irun
+	controller.v
+	controller_test.v
+	-licqueue
+	-noievlic
+Recompiling... reason: file './controller.v' is newer than expected.
+	expected: Wed May  4 13:32:50 2022
+	actual:   Wed May  4 13:33:39 2022
+file: controller.v
+	module worklib.controller:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		controller_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.controller:v <0x7ef410b2>
+			streams:   3, words:  6132
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              2       2
+		Registers:           18      18
+		Scalar wires:        10       -
+		Vectored wires:       2       -
+		Always blocks:        2       2
+		Initial blocks:       1       1
+		Pseudo assignments:   3       3
+	Writing initial simulation snapshot: worklib.controller_test:v
+Loading snapshot worklib.controller_test:v .................... Done
+ncsim> source /pkg/cadence-incisiv-/15.10.027/i686-linux/tools/inca/files/ncsimrc
+ncsim> run
+Testing opcode HLT phase 0 1 2 3 4 5 6 7
+Testing opcode SKZ phase 0 1 2 3 4 5 6 7
+Testing opcode ADD phase 0 1 2 3 4 5 6 7
+Testing opcode AND phase 0 1 2 3 4 5 6 7
+Testing opcode XOR phase 0 1 2 3 4 5 6 7
+Testing opcode LDA phase 0 1 2 3 4 5 6 7
+Testing opcode STO phase 0 1 2 3 4 5 6 7
+Testing opcode JMP phase 0 1 2 3 4 5 6 7
+TEST PASSED
+Simulation complete via $finish(1) at time 65 NS + 0
+./controller_test.v:142     $finish;
+ncsim> exit
+TOOL:	irun	15.10-s027: Exiting on May 04, 2022 at 13:34:14 MST  (total: 00:00:32)
